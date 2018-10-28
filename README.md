@@ -15,11 +15,12 @@ at one of the following URLs:
 The man page is in the file doc/gphoto2.1
 
 ## How do I build it?
+
 ```
-autoreconf -is  #If using SVN source
-configure
-make
-make install
+autoreconf --install --symlink
+./configure
+make                     # or make -j4 for 4 cores, etc.
+make install             # or sudo make install if needed
 ```
 
 Out-of-tree builds are supported. `configure --help` may help.
